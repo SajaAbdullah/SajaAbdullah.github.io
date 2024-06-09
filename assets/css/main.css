@@ -191,10 +191,10 @@ html {
 
 body {
 	background-color: #935d8c;
-	background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+	background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #935d8c 85%);
+	background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #935d8c 85%);
+	background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #935d8c 85%);
+	background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #935d8c 85%);
 }
 
 body.is-preload *,
@@ -306,7 +306,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 300;
+	font-weight: bold;
 	line-height: 1.5;
 	margin: 0 0 0.7em 0;
 	letter-spacing: -0.025em;
@@ -2059,7 +2059,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	background-color: rgba(255, 255, 255, 0.075);
+	background-color: linear-gradient(90deg, #c79cc8, #efa8b0)
 }
 
 input[type="submit"]:active,
@@ -2067,7 +2067,7 @@ input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
 .button:active {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color:linear-gradient(90deg, #c79cc8, #efa8b0)
 }
 
 input[type="submit"].icon:before,
@@ -4030,7 +4030,7 @@ body.is-preload #header.alt .logo {
 	overflow: hidden;
 	padding-block-start: 1.5rem;
 	padding-block-end: 1rem;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 #timeline li .descr {
@@ -4100,11 +4100,13 @@ body.is-preload #header.alt .logo {
 
 
 /* Experince-section CSS*/
-/* Experimental Blog Post */
 .exp_blog_post {
-    background: #fff;
     border-radius: 10px;
     position: relative;
+	border-color: linear-gradient(90deg, #c79cc8, #efa8b0);
+	border: solid 1px;
+	box-shadow: 1px 1px 0.5rem #c79cc8;
+
 }
 
 .exp_container_copy {
@@ -4129,7 +4131,6 @@ body.is-preload #header.alt .logo {
 
 .exp_container_copy .exp_date {
     margin: 0 0 0.5rem 0;
-    color: #999999;
     font-size: 1.25rem;
 }
 
@@ -4138,17 +4139,15 @@ body.is-preload #header.alt .logo {
     font-size: 2rem;
 	font-weight: bold;
     letter-spacing: 0.5px;
-    color: #333333;
 }
 
 .exp_container_copy .exp_desc {
     margin: 0 0 4.5rem 0;
     font-size: 1.1rem;
     line-height: 1.45;
-    color: #000000;
 }
 
-.exp_btn_primary {
+/* .exp_btn_primary {
     border: none;
     outline: none;
     background: linear-gradient(90deg, #c79cc8, #efa8b0);
@@ -4163,4 +4162,63 @@ body.is-preload #header.alt .logo {
 
 .exp_btn_primary:hover {
     box-shadow: 0px 5px 1rem rgba
+} */
+
+/* Responsive CSS */
+@media screen and (max-width: 980px) {
+    .exp_blog_post {
+        margin: 1rem;
+    }
+
+    .exp_container_copy {
+        padding: 4rem 2rem 3rem 2rem;
+    }
+
+    .exp_img_pod {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -2rem;
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .exp_container_copy .exp_date {
+        font-size: 1rem;
+    }
+
+    .exp_container_copy .exp_title {
+        font-size: 1.5rem;
+    }
+
+    .exp_container_copy .exp_desc {
+        font-size: 1rem;
+        margin: 0 0 2.5rem 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .exp_blog_post {
+        margin: 0.5rem;
+    }
+
+    .exp_container_copy {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+
+    .exp_img_pod {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .exp_container_copy .exp_date {
+        font-size: 0.9rem;
+    }
+
+    .exp_container_copy .exp_title {
+        font-size: 1.2rem;
+    }
+
+    .exp_container_copy .exp_desc {
+        font-size: 0.9rem;
+    }
 }
