@@ -3145,6 +3145,7 @@ table.alt tbody tr td {
 	display: block;
 	border-radius: 100%;
 	width: 16em;
+	height: 16em;
 }
 
 @media screen and (max-width: 980px) {
@@ -3848,18 +3849,6 @@ body.is-preload #header.alt .logo {
 	padding: 5em 5em 3em 5em;
 	width: calc(100% + 2em);
 	margin: 0 0 3em -2em;
-}
-
-#footer>* {
-	width: calc(50% - 2em);
-	margin-left: 2em;
-}
-
-#footer .copyright {
-	width: 100%;
-	margin: 2.5em 0 2em 0;
-	font-size: 0.8em;
-	text-align: center;
 }
 
 @media screen and (max-width: 1280px) {
